@@ -1,60 +1,67 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 header {
-    background: rgba(245, 245, 247, 0.8);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    height: 44px;
-    align-items: center;
-
+  background: rgba(245, 245, 247, 0.8);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 44px;
+  align-items: center;
 }
 
 .menu {
-    display: flex;
-    gap: 24px;
-    font-size: 12px;
-    font-weight: 400px;
-    font-family: inter; }
-
-    p{
-        display: flex;
-        justify-content: center;
-    }
-    
-nav{
-    background-image:url(iphone1.jpg); width: 100%; height: 692px;
-     background-position: center;
-
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+  font-weight: 400px;
+  font-family: inter;
 }
 
-h1 {color: rgba(245, 245, 247, 1); display: flex; justify-content: center;
+.Header-text {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-family: inter;
+  height: 20px;
+  padding-top: 16px;
 }
- 
-
-p {color:  rgba(245, 245, 247, 1);
-
-}
-
-button { color: rgba(41,151,255,1); }
-
-
-section{
-     
-    background-image: url(iphone2.jpg); width: 100%; height: 692px;
-    background-position: center; top: 96px;
+.menu-button {
+  border: none;
 }
 
+nav {
+  background-image: url(iphone1.jpg);
+  width: 100%;
+  height: 692px;
+  background-position: center;
+}
 
+h1 {
+  color: rgba(245, 245, 247, 1);
+  display: flex;
+  justify-content: center;
+}
 
+.hero-title {
+  color: rgba(245, 245, 247, 1);
+  display: flex;
+  justify-content: center;
+}
 
+.hero-button {
+  color: rgba(41, 151, 255, 1);
+  display: flex;
+  justify-content: center;
+  border-radius: 999px;
+}
 
-
-
-
-
-
-
-
+section {
+  background-image: url(iphone2.jpg);
+  width: 100%;
+  height: 692px;
+  background-position: center;
+  top: 96px;
+  gap: 12px;
+}
