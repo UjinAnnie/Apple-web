@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+}
+
+header {
+    background: rgba(245, 245, 247, 0.8);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 44px;
+    align-items: center;
+
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    font-size: 12px;
+    font-weight: 400px;
+    font-family: inter; }
+
+    p{
+        display: flex;
+        justify-content: center;
+    }
+    
+nav{
+    background-image:url(iphone1.jpg); width: 100%; height: 692px;
+     background-position: center;
+
+}
+
+h1 {color: rgba(245, 245, 247, 1); display: flex; justify-content: center;
+}
+ 
+
+p {color:  rgba(245, 245, 247, 1);
+
+}
+
+button { color: rgba(41,151,255,1); }
+
+
+section{
+     
+    background-image: url(iphone2.jpg); width: 100%; height: 692px;
+    background-position: center; top: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
