@@ -147,4 +147,24 @@ header {
   width: calc(50% - 6px);
   background-size: cover;
   background-position: center;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products-item:nth-child(2) {
+  background-image: url(iphone5.jpg);
+}
+
+.products-item:nth-child(3) {
+  background-image: url(iphone6.jpg);
+}
+.products-item:nth-child(4) {
+  background-image: url(iphone7.jpg);
+}
+.products-item:nth-child(5) {
+  background-image: url(iphone8.jpg);
+}
+.products-item:nth-child(6) {
+  background-image: url(iphone9.jpg);
 }
