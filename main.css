@@ -1,74 +1,168 @@
 body {
   margin: 0;
+  font-family: Inter, sans-serif;
 }
+
+/* HEADER */
 
 header {
   background: rgba(245, 245, 247, 0.8);
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  height: 44px;
+  justify-content: space-between;
+  height: 48px;
   align-items: center;
 }
 
 .menu {
-  display: flex;
-  gap: 24px;
-  font-size: 12px;
-  font-weight: 400px;
-  font-family: inter;
+  display: none;
 }
 
-.Header-text {
+.logo {
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
-  font-size: 14px;
-  font-family: inter;
-  height: 20px;
-  padding-top: 16px;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
 }
 .menu-button {
-  border: none;
-}
-
-.hero {
-  background-image: url(iphone1.jpg);
-  width: 100%;
-  height: 692px;
-  background-position: center;
-  background-repeat: no-repeat;
-  gap: 12px;
-  text-align: center;
-}
-
-.hero-title {
-  color: rgba(245, 245, 247, 1);
-  padding-top: 20px;
-  font-size: 52px;
-  font-family: inter;
-  font-weight: 600px;
-  margin-bottom: 20px;
-}
-
-.hero-text {
-  color: rgba(245, 245, 247, 1);
-  margin-bottom: 40px;
-  font-size: 24px;
-}
-
-.hero-button {
-  background-color: rgba(41, 151, 255, 1);
-  color: white;
-  border-radius: 22px;
-  padding: 12px 20px;
-  font-size: 16px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
   border: 0;
 }
 
-.hero-button--outlined {
+@media (min-width: 1000px) {
+  .menu {
+    display: flex;
+    gap: 24px;
+  }
+  header {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* yu bolood bainaa  */
+
+.Header-text {
+  padding: 16px 30px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  max-width: 450px;
+  color: rgba(29, 29, 31, 1);
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .Header-text {
+    max-width: 100%;
+  }
+}
+
+/* hero ehelj baina */
+
+.hero {
+  background-image: url(iphone1.jpg);
+  box-sizing: border-box;
+  height: 500px;
+  background-color: black;
+  background-size: cover;
+  color: rgba(245, 245, 247, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 36px;
+}
+
+.hero__title {
+  margin-bottom: 4px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.hero__text {
+  line-height: 120%;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media (min-width: 500px) {
+  .hero {
+    justify-content: flex-start;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(propic.jpg);
+    height: 650px;
+    padding-top: 58px;
+  }
+
+  .hero__title {
+    font-size: 42px;
+    line-height: 32px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+  }
+
+  .hero__actions {
+    gap: 16px;
+  }
+}
+@media (min-width: 1000px) {
+  .hero {
+    height: 692px;
+    background-image: url(prodesktop.jpg);
+    background-size: cover;
+  }
+  .hero__title {
+    font-size: 52px;
+  }
+  .hero__text {
+    font-size: 24px;
+  }
+}
+
+/* button */
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+@media (min-width: 500px) {
+  .btn {
+    padding: 12px 20px;
+    border-radius: 22px;
+    font-size: 16px;
+  }
+}
+.btn--primary {
+  background-color: rgba(0, 113, 227, 1);
+  color: white;
+}
+.btn--outlined {
   background-color: transparent;
   color: rgba(41, 151, 255, 1);
-  border: 1px solid rgba(41, 151, 255, 1);
+  border-color: rgba(41, 151, 255, 1);
 }
 
 .purple {
@@ -118,7 +212,6 @@ header {
   height: 692px;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 12px;
   text-align: center;
 }
 
