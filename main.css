@@ -2,6 +2,10 @@ body {
   margin: 0;
   font-family: Inter, sans-serif;
 }
+main {
+  max-width: 2000px;
+  margin: 0 auto;
+}
 
 /* HEADER */
 
@@ -43,6 +47,12 @@ header {
     display: flex;
     gap: 24px;
   }
+  .menu > a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+  }
+
   header {
     justify-content: center;
     gap: 10px;
@@ -119,7 +129,8 @@ header {
   }
 
   .hero__text {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 32px;
   }
 
   .hero__actions {
@@ -140,14 +151,94 @@ header {
   }
 }
 
-/* button */
+/* IPHONE */
+.iphone {
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  height: 500px;
+  background-color: black;
+  background-image: url(iphone-mobile.jpg);
+  background-size: cover;
+  color: rgba(245, 245, 247, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 36px;
+  margin-top: 12px;
+}
 
+.iphone .btn--primary {
+  background-color: white;
+  color: black;
+}
+.iphone .btn--outlined {
+  border-color: white;
+  color: white;
+}
+
+.iphone__title {
+  margin-bottom: 4px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.iphone__subtitle {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 120%;
+}
+.iphone__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .iphone {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(iphone-pic.jpg);
+    height: 650px;
+    padding-top: 58px;
+  }
+
+  .iphone__title {
+    font-size: 42px;
+    line-height: 60px;
+  }
+  .iphone__subtitle {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .iphone__actions {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .iphone {
+    height: 692px;
+    background-image: url(iphonedesktop.jpg);
+    background-size: cover;
+  }
+  .iphone__title {
+    font-size: 52px;
+  }
+  .iphone__subtitle {
+    font-size: 24px;
+  }
+}
+/* END OF IPHONE */
+
+/* BUTTONS */
 .btn {
   padding: 8px 16px;
   border-radius: 18px;
   border: 1px solid transparent;
   font-size: 14px;
 }
+
 @media (min-width: 500px) {
   .btn {
     padding: 12px 20px;
@@ -155,229 +246,193 @@ header {
     font-size: 16px;
   }
 }
+
 .btn--primary {
   background-color: rgba(0, 113, 227, 1);
   color: white;
 }
+
 .btn--outlined {
   background-color: transparent;
   color: rgba(41, 151, 255, 1);
   border-color: rgba(41, 151, 255, 1);
 }
+/* END OF BUTTONS */
 
-.purple {
-  background-image: url(iphone2.jpg);
-  width: 100%;
-  height: 692px;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 12px;
+/* PRODUCTS */
+.product {
+  height: 500px;
+  background-color: bisque;
   text-align: center;
-}
-
-.purple-title {
-  color: rgba(245, 245, 247, 1);
-  display: flex;
-  justify-content: center;
-  font-size: 52px;
-  font-family: inter;
-  font-weight: 600px;
-  margin-bottom: 20px;
-}
-
-.purple-text {
-  color: rgba(245, 245, 247, 1);
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-
-.purple-button {
-  background-color: white;
-  color: black;
-  border-radius: 22px;
-  padding: 12px 20px;
-  font-size: 16px;
-  border: 0;
-}
-
-.purple-button--outlined {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-}
-
-.gift {
-  background-image: url(iphone3.jpg);
-  width: 100%;
-  height: 692px;
+  box-sizing: border-box;
+  padding-top: 36px;
+  position: relative;
+  margin-bottom: 12px;
   background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-}
-
-.gift-title {
-  color: rgba(0, 0, 0, 1);
-  font-size: 52px;
-  font-family: inter;
-  font-weight: 600px;
-}
-
-.gift-text {
-  color: rgba(0, 0, 0, 1);
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-}
-
-.gift-button {
-  background-color: rgba(41, 151, 255, 1);
-  color: white;
-  border-radius: 22px;
-  padding: 12px 20px;
-  font-size: 16px;
-  border: 0;
-}
-
-.products {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 0 12px;
-}
-
-.products-item {
-  width: 400px;
-  height: 580px;
-  background-image: url(iphone4.jpg);
-  width: calc(50% - 6px);
   background-size: cover;
-  background-position: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding-top: 12px;
+  background-repeat: no-repeat;
 }
-@media (max-width: 1000px) {
-  .products-item:nth-child(1) {
-    width: 100%;
+
+.product:first-child {
+  margin-bottom: 34px;
+}
+
+.product__image {
+  margin-bottom: 8px;
+}
+
+.product__title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.product__subtitle {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 16px;
+  color: rgba(29, 29, 31, 1);
+}
+
+.product__decoration {
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+}
+
+.product--ipad {
+  background-image: url(images/ipad-air-bg.png);
+}
+
+.product--airpods {
+  background-image: url(images/airpods-bg.png);
+  padding-bottom: 54px;
+}
+
+.product--airpods .product__subtitle {
+  color: white;
+}
+
+.product--airpods .product__title {
+  color: white;
+}
+
+.product--end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.product--airpods .product__subtitle {
+  width: 241px;
+}
+
+.product--watch {
+  background-image: url(images/watch-bg.png);
+}
+
+.product--air {
+  background-image: url(images/air-bg.png);
+}
+
+.product--business {
+  background-image: url(images/business-bg.png);
+}
+
+.product--carrier {
+  padding-bottom: 47px;
+  background-image: url(images/carrier-bg.png);
+}
+
+.product--trade {
+  background-image: url(images/trade-bg.png);
+}
+
+.product--card {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
-  .products-item:nth-child(4) {
+
+  .product {
+    flex-basis: calc(50% - 12px - 6px);
+    margin-bottom: 0;
+    margin-bottom: 12px;
+    height: 490px;
+  }
+
+  .product:first-child {
+    margin-bottom: 12px;
+    flex-basis: 100%;
+    height: 650px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product:first-child {
+    flex-basis: calc(50% - 12px - 6px);
+    height: 580px;
+  }
+
+  .product {
+    height: 580px;
+  }
+
+  .product--carrier {
     display: none;
   }
 
-  .products-item:nth-child(7) {
+  .product--business {
+    display: none;
+  }
+
+  .product--card {
     display: block;
-  }
-  .products-item:nth-child(8) {
-    display: block;
+    background-image: url(images/card-bg-desktop.png);
   }
 }
 
-@media (max-width: 600px) {
-  .products {
-    flex-direction: column;
-  }
-  .products-item {
-    width: 100%;
-  }
-}
+/* END OF PRODUCTS */
 
-.products-item:nth-child(1) {
-  background-image: url(iphone4.jpg);
-}
-.products-item:nth-child(2) {
-  background-image: url(iphone5.jpg);
-}
+/* MOVIES */
 
-.products-item:nth-child(3) {
-  background-image: url(iphone6.jpg);
-}
-.products-item:nth-child(4) {
-  background-image: url(iphone7.jpg);
-}
-.products-item:nth-child(5) {
-  background-image: url(iphone8.jpg);
-}
-.products-item:nth-child(6) {
-  background-image: url(iphone9.jpg);
-}
-.products-item:nth-child(7) {
-  display: none;
-  background-image: url(iphone10.jpg);
-}
-.products-item:nth-child(8) {
-  display: none;
-  background-image: url(iphone11.jpg);
-}
-
-.slide-container {
-  width: 100%;
-  overflow: scroll;
-}
-
-.slides {
+.movies {
   display: flex;
-  width: 4800px;
   gap: 16px;
-  padding-top: 12px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 
-.slide {
-  width: 1250px;
-  height: 668px;
-  border: 2px solid transparent;
-  background-color: antiquewhite;
-  font-size: 60px;
-  text-align: center;
+.movie {
+  background-color: aquamarine;
+  flex-basis: 80vw;
+  flex-shrink: 0;
+  aspect-ratio: 274 / 495;
+  margin-bottom: 20px;
+  scroll-snap-align: center;
 }
 
-.slide:nth-child(1) {
-  background-image: url(image1.jpg);
-  background-size: cover;
+@media (min-width: 500px) {
+  .movie {
+    aspect-ratio: 689 / 368;
+    scroll-snap-align: start;
+  }
 }
 
-.slide:nth-child(2) {
-  background-image: url(image2.jpg);
-  background-size: cover;
-}
-.slide:nth-child(3) {
-  background-image: url(image3.jpg);
-  background-size: cover;
-}
-
-.yoga-container {
-  width: 100%;
-  overflow: scroll;
-}
-.yogas {
-  display: flex;
-  width: 4800px;
-  padding-top: 32px;
-  padding-bottom: 56px;
-  gap: 16px;
-}
-.yoga {
-  width: 417px;
-  height: 236px;
-  border: 2px solid transparent;
-  background-color: antiquewhite;
-  font-size: 60px;
-  text-align: center;
-}
-
-.yoga:nth-child(1) {
-  background-image: url(y1.jpg);
-}
-.yoga:nth-child(2) {
-  background-image: url(y2.jpg);
-}
-.yoga:nth-child(3) {
-  background-image: url(y3.jpg);
-}
-.yoga:nth-child(4) {
-  background-image: url(y4.jpg);
-}
-.yoga:nth-child(5) {
-  background-image: url(y5.jpg);
+@media (min-width: 1000px) {
+  .movie {
+    flex-basis: 70vw;
+    max-width: 1250px;
+    aspect-ratio: 1250 / 668;
+    scroll-snap-align: center;
+  }
 }
