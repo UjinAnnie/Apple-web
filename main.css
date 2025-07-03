@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Inter, sans-serif;
 }
-main {
+main.home {
   max-width: 2000px;
   margin: 0 auto;
 }
@@ -10,6 +10,11 @@ main {
 /* HEADER */
 
 header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
   background: rgba(245, 245, 247, 0.8);
   display: flex;
   justify-content: space-between;
@@ -304,11 +309,11 @@ header {
 }
 
 .product--ipad {
-  background-image: url(images/ipad-air-bg.png);
+  background-image: url(ipadair.jpg);
 }
 
 .product--airpods {
-  background-image: url(images/airpods-bg.png);
+  background-image: url(airpods4.jpg);
   padding-bottom: 54px;
 }
 
@@ -332,24 +337,24 @@ header {
 }
 
 .product--watch {
-  background-image: url(images/watch-bg.png);
+  background-image: url(tsag.jpg);
 }
 
 .product--air {
-  background-image: url(images/air-bg.png);
+  background-image: url(macbook\ air.jpg);
 }
 
 .product--business {
-  background-image: url(images/business-bg.png);
+  background-image: url(businesss.png);
 }
 
 .product--carrier {
   padding-bottom: 47px;
-  background-image: url(images/carrier-bg.png);
+  background-image: url(carrierrr.jpg);
 }
 
 .product--trade {
-  background-image: url(images/trade-bg.png);
+  background-image: url(tardee.jpg);
 }
 
 .product--card {
@@ -397,7 +402,7 @@ header {
 
   .product--card {
     display: block;
-    background-image: url(images/card-bg-desktop.png);
+    background-image: url(cardd.jpg);
   }
 }
 
@@ -413,7 +418,7 @@ header {
 }
 
 .movie {
-  background-color: aquamarine;
+  background-color: rgb(249, 213, 219);
   flex-basis: 80vw;
   flex-shrink: 0;
   aspect-ratio: 274 / 495;
@@ -435,4 +440,27 @@ header {
     aspect-ratio: 1250 / 668;
     scroll-snap-align: center;
   }
+}
+
+.movie--mom {
+  background-image: url();
+}
+main.store {
+  background-color: rgba(245, 245, 247, 1);
+  min-height: 100vh;
+}
+.latest {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-left: 100px;
+}
+
+.latest__item {
+  width: 300px;
+  height: 400px;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  flex-shrink: 0;
+  border-radius: 20px;
 }
